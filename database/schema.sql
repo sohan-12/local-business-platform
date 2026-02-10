@@ -1,0 +1,39 @@
+CREATE TABLE users (
+  id SERIAL PRIMARY KEY,
+  name VARCHAR(100),
+  email VARCHAR(100) UNIQUE NOT NULL,
+  password TEXT NOT NULL,
+  role VARCHAR(20) DEFAULT 'USER',
+  created_at TIMESTAMP DEFAULT CURRENT_TIMESTAMP
+);
+
+CREATE TABLE categories (
+  id SERIAL PRIMARY KEY,
+  name VARCHAR(100) NOT NULL
+);
+
+CREATE TABLE businesses (
+  id SERIAL PRIMARY KEY,
+  owner_id INTEGER REFERENCES users(id),
+  category_id INTEGER REFERENCES categories(id),
+  name VARCHAR(150),
+  address TEXT,
+  is_approved BOOLEAN DEFAULT FALSE,
+  created_at TIMESTAMP DEFAULT CURRENT_TIMESTAMP
+);
+
+CREATE TABLE reviews (
+  id SERIAL PRIMARY KEY,
+  user_id INTEGER REFERENCES users(id),
+  business_id INTEGER REFERENCES businesses(id),
+  rating INTEGER CHECK (rating BETWEEN 1 AND 5),
+  comment TEXT,
+  created_at TIMESTAMP DEFAULT CURRENT_TIMESTAMP
+);
+
+CREATE TABLE admin_logs (
+  id SERIAL PRIMARY KEY,
+  admin_id INTEGER REFERENCES users(id),
+  action TEXT,
+  created_at TIMESTAMP DEFAULT CURRENT_TIMESTAMP
+);
