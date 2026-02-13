@@ -1,6 +1,9 @@
 const express = require("express");
 const cors = require("cors");
+
 const userRoutes = require("./routes/userRoutes");
+
+const path = require("path");
 
 require("dotenv").config();
 
@@ -9,7 +12,11 @@ const app = express();
 // Middlewares
 app.use(cors());
 app.use(express.json());
+
 app.use("/api/users", userRoutes);
+
+app.use(express.static(path.join(__dirname, "../client")));
+
 
 // Test Route
 app.get("/", (req, res) => {
