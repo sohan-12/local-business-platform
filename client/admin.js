@@ -11,7 +11,7 @@ if (payload.role !== "admin") {
   window.location.href = "home.html";
 }
 
-fetch("http://localhost:5000/api/businesses")
+fetch("http://local-business-platform.onrender.com/api/businesses")
 .then(res => res.json())
 .then(data => {
 
@@ -39,7 +39,7 @@ fetch("http://localhost:5000/api/businesses")
 
 function deleteBusiness(id) {
 
-  fetch(`http://localhost:5000/api/businesses/delete/${id}`, {
+  fetch(`http://local-business-platform.onrender.com/api/businesses/delete/${id}`, {
     method: "DELETE"
   })
   .then(() => {
