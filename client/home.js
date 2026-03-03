@@ -1,4 +1,4 @@
-const API = "http://localhost:5000/api/businesses";
+const API = "https://local-business-platform.onrender.com/api/businesses";
 
 const token = localStorage.getItem("token");
 
