@@ -51,7 +51,7 @@ if (form) {
     try {
 
       const res = await fetch(
-        "http://localhost:5000/api/businesses/add",
+        "http://local-business-platform.onrender.com/api/businesses/add",
         {
           method: "POST",
           headers: { "Content-Type": "application/json" },
