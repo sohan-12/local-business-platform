@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Local Business Platform</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<div class="main-layout">
+
+  <!-- LEFT SIDEBAR -->
+  <div class="sidebar">
+
+    <h2>Explore Local Businesses</h2>
+
+    <input 
+      id="searchInput" 
+      placeholder="Search businesses..." 
+      onkeyup="searchBusiness()"
+    >
+
+    <br><br>
+
+    <div class="categories">
+      <button onclick="filterCategory('All')">All</button>
+      <button onclick="filterCategory('Hotels')">Hotels</button>
+      <button onclick="filterCategory('Restaurants')">Restaurants</button>
+      <button onclick="filterCategory('Clubs')">Clubs</button>
+      <button onclick="filterCategory('Cafes')">Cafes</button>
+      <button onclick="filterCategory('Gyms')">Gyms</button>
+      <button onclick="filterCategory('Salons')">Salons</button>
+    </div>
+
+    <br>
+
+    <button onclick="logout()">Logout</button>
+
+  </div>
+
+  <!-- RIGHT CONTENT AREA -->
+  <div class="content">
+    <div id="businessList"></div>
+  </div>
+
+</div>
+
+<script src="home.js"></script>
+
+</body>
+</html>

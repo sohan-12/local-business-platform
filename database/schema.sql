@@ -13,13 +13,29 @@ CREATE TABLE categories (
 );
 
 CREATE TABLE businesses (
+
   id SERIAL PRIMARY KEY,
-  owner_id INTEGER REFERENCES users(id),
-  category_id INTEGER REFERENCES categories(id),
-  name VARCHAR(150),
+
+  owner_id INT REFERENCES users(id),
+
+  name VARCHAR(255) NOT NULL,
+
+  category VARCHAR(100) NOT NULL,
+
+  description TEXT,
+
   address TEXT,
-  is_approved BOOLEAN DEFAULT FALSE,
+
+  latitude DECIMAL(10,8),
+
+  longitude DECIMAL(11,8),
+
+  phone VARCHAR(20),
+
+  price_range VARCHAR(10),
+
   created_at TIMESTAMP DEFAULT CURRENT_TIMESTAMP
+
 );
 
 CREATE TABLE reviews (

@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Add Business</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<div class="container">
+
+<h2>Add Business</h2>
+
+<form id="businessForm">
+
+<input id="name" placeholder="Business Name" required>
+
+<br><br>
+
+<select id="category">
+
+<option value="Hotels">Hotels</option>
+<option value="Restaurants">Restaurants</option>
+<option value="Clubs">Clubs</option>
+<option value="Cafes">Cafes</option>
+<option value="Gyms">Gyms</option>
+<option value="Salons">Salons</option>
+
+</select>
+
+<br><br>
+
+<input id="price_range" placeholder="Price ($, $$, $$$)" required>
+
+<br><br>
+
+<input id="address" placeholder="Address" required>
+
+<br><br>
+
+<input id="phone" placeholder="Phone" required>
+
+<br><br>
+
+<input id="latitude" placeholder="Latitude (example: 17.3850)">
+
+<br><br>
+
+<input id="longitude" placeholder="Longitude (example: 78.4867)">
+
+<br><br>
+
+<input id="image_url" placeholder="Image URL (Paste image link here)" required>
+
+<br><br>
+
+<textarea id="description" placeholder="Description"></textarea>
+
+<br><br>
+
+<button type="submit">Add Business</button>
+
+</form>
+
+<br>
+
+<button onclick="goBack()">Go Back</button>
+
+</div>
+
+<script src="addBusiness.js"></script>
+
+</body>
+</html>

@@ -1,0 +1,306 @@
+/* Reset */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: Arial, sans-serif;
+}
+
+/* Body background */
+body {
+  height: 100vh;
+  background: linear-gradient(135deg, #667eea, #764ba2);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+/* Card container */
+.container {
+  background: white;
+  padding: 30px;
+  border-radius: 12px;
+  width: 350px;
+  box-shadow: 0 10px 25px rgba(0,0,0,0.2);
+  text-align: center;
+}
+
+/* Title */
+h2 {
+  margin-bottom: 20px;
+  color: #333;
+}
+
+/* Inputs */
+input {
+  width: 100%;
+  padding: 10px;
+  margin: 10px 0;
+  border: 1px solid #ccc;
+  border-radius: 6px;
+  font-size: 16px;
+}
+
+/* Button */
+button {
+  width: 100%;
+  padding: 10px;
+  background: #667eea;
+  color: white;
+  border: none;
+  border-radius: 6px;
+  font-size: 16px;
+  cursor: pointer;
+  margin-top: 10px;
+}
+
+/* Button hover */
+button:hover {
+  background: #5a67d8;
+}
+
+/* Links */
+a {
+  text-decoration: none;
+  color: #667eea;
+  font-weight: bold;
+}
+
+a:hover {
+  text-decoration: underline;
+}
+
+/* Dashboard text */
+#name {
+  font-size: 20px;
+  margin: 10px 0;
+  color: #333;
+}
+
+#email {
+  color: #666;
+  margin-bottom: 20px;
+}
+
+.categories button {
+  margin: 5px;
+  padding: 6px 10px;
+}
+
+
+.card h3 {
+  margin-bottom: 5px;
+}
+
+.card a {
+  display: inline-block;
+  margin-top: 8px;
+  color: blue;
+}
+
+.business-img {
+  width: 100%;
+  height: 200px;
+  object-fit: cover;
+  border-radius: 10px;
+}
+
+.card {
+  background: #ffffff;
+  padding: 20px;
+  border-radius: 18px;
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.08);
+  transition: 0.3s ease;
+}
+
+.card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 15px 35px rgba(0, 0, 0, 0.12);
+}
+
+.business-img {
+  width: 100%;
+  height: 200px;
+  object-fit: cover;
+  border-radius: 12px;
+}
+
+/* Tablet */
+@media (max-width: 992px) {
+  #businessList {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+/* Mobile */
+@media (max-width: 600px) {
+  #businessList {
+    grid-template-columns: 1fr;
+  }
+
+  .container {
+    width: 90%;
+    padding: 15px;
+  }
+}
+
+/* ===== MAIN LAYOUT ===== */
+
+.main-layout {
+  display: grid;
+  grid-template-columns: 280px 1fr;
+  gap: 30px;
+  max-width: 1300px;
+  width: 95%;
+  margin: 40px auto;
+}
+
+/* ===== SIDEBAR ===== */
+
+.sidebar {
+  background: white;
+  padding: 25px;
+  border-radius: 16px;
+  box-shadow: 0 6px 20px rgba(0,0,0,0.1);
+  width: 100%;
+}
+
+
+.sidebar input {
+  width: 100%;
+  padding: 10px;
+  border-radius: 8px;
+}
+
+.categories button,
+.sidebar button {
+  width: 100%;
+  padding: 10px;
+  margin-bottom: 12px;
+}
+
+/* ===== BUSINESS GRID ===== */
+
+#businessList {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 25px;
+}
+
+/* ===== RESPONSIVE ===== */
+
+/* Tablet */
+@media (max-width: 992px) {
+  .main-layout {
+    grid-template-columns: 1fr;
+  }
+
+  #businessList {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+/* Mobile */
+@media (max-width: 600px) {
+  .main-layout {
+    width: 95%;
+    margin: 20px auto;
+  }
+
+  #businessList {
+    grid-template-columns: 1fr;
+  }
+
+  .sidebar {
+    padding: 20px;
+  }
+}
+
+.card hr {
+  margin: 15px 0;
+  border: none;
+  height: 1px;
+  background: #e0e0e0;
+}
+
+.card h4 {
+  margin-bottom: 8px;
+}
+
+.card select,
+.card textarea {
+  width: 100%;
+  padding: 8px;
+  border-radius: 8px;
+  border: 1px solid #ccc;
+  font-size: 14px;
+}
+
+.card textarea {
+  resize: none;
+  height: 70px;
+}
+
+.card button {
+  width: 100%;
+  padding: 10px;
+  background: linear-gradient(135deg, #667eea, #764ba2);
+  border: none;
+  border-radius: 10px;
+  color: white;
+  font-weight: 600;
+  cursor: pointer;
+  transition: 0.2s;
+}
+
+.card button:hover {
+  opacity: 0.9;
+}
+
+.delete-btn {
+  margin-top: 5px;
+  padding: 4px 8px;
+  font-size: 12px;
+  background: #ff4d4d;
+  color: white;
+  border: none;
+  border-radius: 6px;
+  cursor: pointer;
+}
+
+.delete-btn:hover {
+  opacity: 0.8;
+}
+
+.review-item {
+  background: #f5f5f5;
+  padding: 8px;
+  margin-bottom: 8px;
+  border-radius: 8px;
+  font-size: 14px;
+}
+
+
+.input-field {
+  width: 100%;
+  padding: 8px;
+  margin-top: 8px;
+  border-radius: 6px;
+  border: 1px solid #ccc;
+}
+
+.textarea {
+  height: 60px;
+  resize: none;
+}
+
+.submit-btn {
+  margin-top: 10px;
+  width: 100%;
+  padding: 8px;
+  border: none;
+  border-radius: 8px;
+  background: linear-gradient(45deg, #667eea, #764ba2);
+  color: white;
+  cursor: pointer;
+}
