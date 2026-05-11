@@ -21,7 +21,7 @@ export const fetchBusiness = async (id) => {
     .from('businesses')
     .select('*')
     .eq('id', id)
-    .single();
+    .maybeSingle();
   if (error) throw error;
   return data;
 };
@@ -46,6 +46,48 @@ export const insertReview = async (businessId, userId, rating, title, content) =
       title,
       content,
     });
+  if (error) throw error;
+  return data;
+};
+
+export const createBusiness = async (business) => {
+  const { data, error } = await supabase
+    .from('businesses')
+    .insert([business]);
+  if (error) throw error;
+  return data;
+};
+
+export const updateBusiness = async (id, updates) => {
+  const { data, error } = await supabase
+    .from('businesses')
+    .update(updates)
+    .eq('id', id);
+  if (error) throw error;
+  return data;
+};
+
+export const deleteBusiness = async (id) => {
+  const { data, error } = await supabase
+    .from('businesses')
+    .delete()
+    .eq('id', id);
+  if (error) throw error;
+  return data;
+};
+
+export const getAllUsers = async () => {
+  const { data, error } = await supabase
+    .from('users')
+    .select('*');
+  if (error) throw error;
+  return data;
+};
+
+export const getAllReviews = async () => {
+  const { data, error } = await supabase
+    .from('reviews')
+    .select('*');
   if (error) throw error;
   return data;
 };

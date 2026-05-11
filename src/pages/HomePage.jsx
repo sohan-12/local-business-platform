@@ -1,4 +1,5 @@
 import { useState, useEffect } from 'react';
+import { Link } from 'react-router-dom';
 import { fetchBusinesses } from '../lib/supabase';
 import BusinessCard from '../components/BusinessCard';
 
@@ -28,9 +29,19 @@ export default function HomePage() {
   return (
     <div>
       <div className="bg-gradient-to-r from-gray-900 to-gray-800 text-white py-16">
-        <div className="max-w-7xl mx-auto px-4 text-center">
-          <h1 className="text-5xl font-bold mb-4">Discover Local Businesses</h1>
-          <p className="text-xl text-gray-300">Find the best restaurants, shopping, services and more</p>
+        <div className="max-w-7xl mx-auto px-4">
+          <div className="flex justify-between items-start">
+            <div className="flex-1">
+              <h1 className="text-5xl font-bold mb-4">Discover Local Businesses</h1>
+              <p className="text-xl text-gray-300">Find the best restaurants, shopping, services and more</p>
+            </div>
+            <Link
+              to="/admin/login"
+              className="px-4 py-2 bg-gray-700 text-white rounded-lg hover:bg-gray-600 font-medium text-sm"
+            >
+              Admin Login
+            </Link>
+          </div>
         </div>
       </div>
 
