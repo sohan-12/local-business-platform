@@ -1,0 +1,33 @@
+@import "tailwindcss";
+
+@layer base {
+  body {
+    @apply bg-white text-gray-900;
+  }
+
+  h1 {
+    @apply text-4xl font-bold;
+  }
+
+  h2 {
+    @apply text-2xl font-semibold;
+  }
+}
+
+@layer components {
+  .btn-primary {
+    @apply px-4 py-2 bg-red-600 text-white rounded-lg font-medium hover:bg-red-700 transition-colors;
+  }
+
+  .btn-secondary {
+    @apply px-4 py-2 border border-gray-300 rounded-lg font-medium hover:bg-gray-50 transition-colors;
+  }
+
+  .business-card {
+    @apply border border-gray-200 rounded-lg overflow-hidden hover:shadow-lg transition-shadow;
+  }
+
+  .rating-stars {
+    @apply flex items-center gap-1;
+  }
+}
